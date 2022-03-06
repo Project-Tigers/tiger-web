@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from "./Home/Home";
-import Products from "./Products/Products"
+import Product from "./Products/Products"
+import Orders from './Orders/Orders'
 import './App.css';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <div className="header-links">
               <Link to="/">Home</Link>
               <Link to="/catalog">Catalog</Link>
+              <Link to="/orders">Orders</Link>
             </div>
           </header>
           <aside className="sidebar">
@@ -44,10 +46,17 @@ function App() {
             </ul>
           </aside>
           <main className="main">
-            <Routes>
-              <Route path = "/" element = {<Home />} />
-              <Route path = "/catalog" element = {<Products />} />
-            </Routes>
+            <Switch>
+              <Route exact path="/">
+                <Home />  
+              </Route>
+              <Route path="/catalog">
+                <Product />
+              </Route>
+              <Route path="/orders">
+                <Orders />
+              </Route>"
+            </Switch>
           </main>
           <footer className="footer">&copy; 2021 Jet Piranha</footer>
         </body>
