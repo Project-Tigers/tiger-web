@@ -1,7 +1,7 @@
 function Products() {
     return (
-        <div className="content">
-            <ul className="products"></ul>
+        <div>
+            <h2> Products </h2>
         </div>
     );
 }
