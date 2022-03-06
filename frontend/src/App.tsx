@@ -56,6 +56,9 @@ function App() {
               <Route path="/orders">
                 <Orders />
               </Route>"
+              <Route path="/order/:id">
+                <OrderDetail />
+              </Route>
             </Switch>
           </main>
           <footer className="footer">&copy; 2021 Jet Piranha</footer>
