@@ -1,8 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, BrowserRouter } from 'react-router-dom';
 import Home from "./Home/Home";
 import Product from "./Products/Products"
 import Orders from './Orders/Orders'
+import OrderDetail from './Orders/OrderDetails'
 import './App.css';
 
 function App() {
@@ -46,20 +47,12 @@ function App() {
             </ul>
           </aside>
           <main className="main">
-            <Switch>
-              <Route exact path="/">
-                <Home />  
-              </Route>
-              <Route path="/catalog">
-                <Product />
-              </Route>
-              <Route path="/orders">
-                <Orders />
-              </Route>"
-              <Route path="/order/:id">
-                <OrderDetail />
-              </Route>
-            </Switch>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catalog" element={<Product />} />
+              <Route path="orders" element={<Orders />}></Route>
+              <Route path="/order/:id" element={<OrderDetail />}></Route>
+            </Routes>
           </main>
           <footer className="footer">&copy; 2021 Jet Piranha</footer>
         </body>
