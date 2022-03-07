@@ -18,12 +18,12 @@ function App() {
     <Router>
       <div className="grid-container">
           <link rel="stylesheet" href="style.css" />
-          <title>Jet Piranha</title>
+          <title>Tigers</title>
         <body>
           <header className="header">
             <div className="brand">
               <button onClick={openMenu}>&#9776;</button>
-              <a href="index.htm">Jet Piranha</a>
+              <a href="index.htm">Tigers</a>
             </div>
             <div className="header-links">
               <Link to="/">Home</Link>
@@ -49,7 +49,7 @@ function App() {
               <Route path = "/catalog" element = {<Products />} />
             </Routes>
           </main>
-          <footer className="footer">&copy; 2021 Jet Piranha</footer>
+          <footer className="footer">&copy; 2022 Tigers</footer>
         </body>
       </div>
     </Router>
