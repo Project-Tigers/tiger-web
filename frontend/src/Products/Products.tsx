@@ -19,7 +19,7 @@ function Products() {
     const [products, setProducts]: [Product[], (products: Product[]) => void] = useState(emptyProducts);
 
     useEffect(() => {
-        axios.get<Product[]>("https://localhost:7250/catalog",
+        axios.get<Product[]>("https://localhost:7251/catalog",
             { 
                 headers: {
                     "Content-Type": "application/json",
@@ -34,7 +34,7 @@ function Products() {
         <div className = "content">
             <ul className = "products">
                 {products.map((product) => (
-                    <li>
+                    <li key={product.id}>
                         <div className="product">
                             <img 
                             className = "product-image"
